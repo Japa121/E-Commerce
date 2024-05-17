@@ -2,7 +2,17 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import ProductsList from "./components/ProductsList";
+import { useEffect, useState } from "react";
 function App() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch(`/db.json`)
+    .then((res) => res.json())
+    .then((data) => setProducts(data.products));
+  }, []);
+  
+
   return (
     <Router>
       <div className="App">
@@ -16,7 +26,7 @@ function App() {
             </div>
 
             <div className="main-content">
-              <ProductsList />
+              <ProductsList products={products} />
 
             </div>
           </div>
