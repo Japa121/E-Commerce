@@ -3,22 +3,23 @@ import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import ProductsList from "./components/ProductsList";
 import { useEffect, useState } from "react";
+import ExclusiveSection from "./components/ExclusiveSection";
+import TestimonialsList from "./components/TestimonialsList";
 function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     fetch(`/db.json`)
-    .then((res) => res.json())
-    .then((data) => setProducts(data.products));
+      .then((res) => res.json())
+      .then((data) => setProducts(data.products));
   }, []);
-  
 
   return (
     <Router>
       <div className="App">
         <Navbar />
         <main>
-          <Header/>
+          <Header />
           <div className="page-inner-content">
             <div className="section-title">
               <h3>Produtos Selecionados</h3>
@@ -27,11 +28,12 @@ function App() {
 
             <div className="main-content">
               <ProductsList products={products} />
-
             </div>
           </div>
         </main>
-       </div>
+        <ExclusiveSection />
+        <TestimonialsList />
+      </div>
     </Router>
   );
 }

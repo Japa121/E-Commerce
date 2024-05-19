@@ -14,7 +14,7 @@ export default function Product({
             &#9733;&#9733;&#9733;&#9733;&#9733;
         </p>
         <p className="price">
-            {price} <span>R$</span>
+            <span>R$</span> {price}
         </p>
 
         <div className="buttons">

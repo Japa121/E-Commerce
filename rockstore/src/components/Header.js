@@ -10,7 +10,7 @@ export default function Header() {
     <div className="inner-content">
         <div className="Left-side">
             <h2>Adquira um novo estilo ao seu trabalho</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab nobis maxime quos praesentium, hic quisquam debitis dolore laborum voluptatum fugiat deserunt sed, iusto nisi modi ad nam voluptatibus velit? Fugiat.
+            <p>Sua loja de confiança para os melhores eletrônicos. Oferecemos uma vasta seleção de produtos de última geração, desde smartphones e laptops até acessórios e gadgets inovadores. Aproveite nossas ofertas exclusivas e descubra o que há de mais novo no mundo da tecnologia!
             </p>
             <Link to="/products" className="see-more-btn" >
                 <span>Ver Agora</span>
